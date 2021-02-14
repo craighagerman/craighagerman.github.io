@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>How to Use H2o Sparking Water Within Spark Code</title>
-  <meta name="description" content="How to Use H2o Sparking Water Within Spark Code">
+  <title>How to Use H2O Sparking Water Within Spark Code</title>
+  <meta name="description" content="How to Use H2O Sparking Water Within Spark Code">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -461,7 +461,7 @@ kbd, pre, samp {
 
         
         </p>
-        <h1>How to Use H2o Sparking Water Within Spark Code</h1>
+        <h1>How to Use H2O Sparking Water Within Spark Code</h1>
       </div>
 
       <div class="post-content">
@@ -473,8 +473,10 @@ kbd, pre, samp {
 bin/sparkling-shell
 </code></pre><p>or specify Sparking Water when starting a spark-shell:</p>
 <pre><code>$SPARK_HOME/bin/spark-shell --packages ai.h2o:sparkling-water-package_2.11:3.32.0.4-1-2.4
-</code></pre><p>On the other had I already have 36k lines of Scala Spark code. Adding Sparking Water dependencies and importing relevant libraries didn&rsquo;t work (various errors thrown). The following is what I did to get things working.</p>
-<h2 id="versioning">Versioning</h2>
+</code></pre><p>On the other had I already have 36k lines of Scala Spark code. Adding Sparking Water dependencies and importing relevant libraries didn&rsquo;t work (various errors thrown).</p>
+<h2 id="the-solution">The solution</h2>
+<p>The following is what I did to get things working.</p>
+<h3 id="versioning">Versioning</h3>
 <p>It is necessary to choose Sparking Water versions that match your Spark and Scala versions. This is what I am using:</p>
 <pre><code>Spark: 3.0.1
 Scala: 2.12.10 (OpenJDK)
@@ -483,7 +485,7 @@ Scala: 2.12.10 (OpenJDK)
 <li>1.4.x is for Spark 1.4</li>
 <li>3.x is for Spark 3.x</li>
 </ul>
-<h2 id="gradle-dependencies">Gradle Dependencies</h2>
+<h3 id="gradle-dependencies">Gradle Dependencies</h3>
 <p>I use gradle as a dependency manager for this Scala project. I discovered that the following <em>three</em> dependencies are required:</p>
 <pre><code>compile &quot;org.apache.spark:spark-repl_2.12:3.1.0&quot;
 compile &quot;ai.h2o:sparkling-water-package_2.12:3.32.0.4-1-3.0&quot;
@@ -494,13 +496,13 @@ compile group: 'org.scala-lang', name: 'scala-compiler', version: '2.12.10'
 <p>see <a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-scala-tools-nsc-interpreter-interactivereader/">https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-scala-tools-nsc-interpreter-interactivereader/</a></p>
 <p><code>scala-compiler</code> is needed to prevent <code>java.lang.NoClassDefFoundError: scala/tools/nsc/interpreter/InteractiveReader</code> errors.</p>
 <p>see: <a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-org-apache-spark-repl-main/">https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-org-apache-spark-repl-main/</a></p>
-<h2 id="test-data">Test Data</h2>
+<h3 id="test-data">Test Data</h3>
 <p>Grab prostate and iris data from the H20 github repo:</p>
 <p><a href="https://raw.githubusercontent.com/h2oai/h2o-sparkling/master/data/prostate.csv">prostate data</a></p>
 <p><a href="https://raw.githubusercontent.com/h2oai/sparkling-water/master/examples/smalldata/iris/iris_wheader.csv">iris data</a></p>
 <p>and put them in the resources directory under <code>smalldata</code>  e.g.</p>
 <p><img src="https://craighagerman.github.io/img/resources.png" alt="Example image"></p>
-<h2 id="test-code">Test Code</h2>
+<h3 id="test-code">Test Code</h3>
 <p>Use <code>FunSpec</code> and   <code>SharedSparkSessionBase</code> to create a test spec (edit <code>package &lt;com.companyname&gt;.ml.clustering</code> as needed) :</p>
 <pre><code>package &lt;com.companyname&gt;.ml.clustering
 
