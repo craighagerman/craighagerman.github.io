@@ -6,7 +6,20 @@
     <description>Recent content on Craig Hagerman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Craig Hagerman 2021</copyright><atom:link href="https://craighagerman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© Craig Hagerman 2021</copyright>
+    <lastBuildDate>Sat, 13 Feb 2021 21:28:14 -0500</lastBuildDate><atom:link href="https://craighagerman.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use H2o Sparking Water Within Spark Code</title>
+      <link>https://craighagerman.github.io/posts/how-to-use-h2o-sparking-water-within-spark-code/</link>
+      <pubDate>Sat, 13 Feb 2021 21:28:14 -0500</pubDate>
+      
+      <guid>https://craighagerman.github.io/posts/how-to-use-h2o-sparking-water-within-spark-code/</guid>
+      <description>The Situation I had an existing Spark (Scala) project (using Spark ML algorithms). I wanted to try out H2O Sparking Water algorithms within this project. The problem is that most documentation around H2O Sparkling Water is are different use cases.
+For example, many examples start a sparking-shell:
+cd sparkling-water-3.32.0.4-1-2.4 bin/sparkling-shell or specify Sparking Water when starting a spark-shell:
+$SPARK_HOME/bin/spark-shell --packages ai.h2o:sparkling-water-package_2.11:3.32.0.4-1-2.4 On the other had I already have 36k lines of Scala Spark code.</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://craighagerman.github.io/about/</link>

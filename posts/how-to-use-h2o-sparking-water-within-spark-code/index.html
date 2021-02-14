@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.80.0" />
   
   <meta charset="utf-8">
-  <title>Craig Hagerman</title>
-  <meta name="description" content="Craig Hagerman">
+  <title>How to Use H2o Sparking Water Within Spark Code</title>
+  <meta name="description" content="How to Use H2o Sparking Water Within Spark Code">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -405,8 +404,6 @@ kbd, pre, samp {
 
   
   
-  <link href="https://craighagerman.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Craig Hagerman Feed" />
-  
 
   
   
@@ -444,42 +441,139 @@ kbd, pre, samp {
 
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
-	<div class="pure-u-11-12 pure-u-md-7-12">
-	<div class="post-content">
-	
-	  <p class="posts-name">Recent posts:</p>
+  <div class="pure-u-11-12 pure-u-md-7-12">
+    <div class="post">
 
-	  <ul class="posts">
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://craighagerman.github.io/posts/how-to-use-h2o-sparking-water-within-spark-code/">How to Use H2o Sparking Water Within Spark Code</a>
-
-      <p class="footnote">
-        <time datetime="2021-02-13 21:28:14 -0500 EST">
+      <div class="post-title">
+        <p class="footnote">
           
-            02-13-2021
+            <time datetime="2021-02-13 21:28:14 -0500 EST">
+              
+                02-13-2021
+              
+            </time>
           
-        </time>
-
+        
+        
         
 
         
 
         
+        </p>
+        <h1>How to Use H2o Sparking Water Within Spark Code</h1>
+      </div>
 
+      <div class="post-content">
         
+        <h2 id="the-situation">The Situation</h2>
+<p>I had an existing Spark (Scala) project (using Spark ML algorithms). I wanted to try out H2O Sparking Water algorithms within this project. The problem is that most documentation around H2O Sparkling Water is are different use cases.</p>
+<p>For example, many examples start a sparking-shell:</p>
+<pre><code>cd sparkling-water-3.32.0.4-1-2.4
+bin/sparkling-shell
+</code></pre><p>or specify Sparking Water when starting a spark-shell:</p>
+<pre><code>$SPARK_HOME/bin/spark-shell --packages ai.h2o:sparkling-water-package_2.11:3.32.0.4-1-2.4
+</code></pre><p>On the other had I already have 36k lines of Scala Spark code. Adding Sparking Water dependencies and importing relevant libraries didn&rsquo;t work (various errors thrown). The following is what I did to get things working.</p>
+<h2 id="versioning">Versioning</h2>
+<p>It is necessary to choose Sparking Water versions that match your Spark and Scala versions. This is what I am using:</p>
+<pre><code>Spark: 3.0.1
+Scala: 2.12.10 (OpenJDK)
+</code></pre><p>n.b. Naming of Sparkling Water releases follows Spark release. e.g.</p>
+<ul>
+<li>1.4.x is for Spark 1.4</li>
+<li>3.x is for Spark 3.x</li>
+</ul>
+<h2 id="gradle-dependencies">Gradle Dependencies</h2>
+<p>I use gradle as a dependency manager for this Scala project. I discovered that the following <em>three</em> dependencies are required:</p>
+<pre><code>compile &quot;org.apache.spark:spark-repl_2.12:3.1.0&quot;
+compile &quot;ai.h2o:sparkling-water-package_2.12:3.32.0.4-1-3.0&quot;
+compile group: 'org.scala-lang', name: 'scala-compiler', version: '2.12.10'
+</code></pre><p>The <code>sparkling-water-package</code> dependency is obvious. You need Sparking Water &hellip;. to run Sparking Water algorithms. (n.b. For this kind of use case you need the <code>package</code> dependency, not <code>core</code> etc)</p>
+<p>But the two other dependencies are non-obvious.</p>
+<p><code>spark-repl</code> is needed to prevent <code>java.lang.NoClassDefFoundError: org/apache/spark/repl/Main</code> errors.</p>
+<p>see <a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-scala-tools-nsc-interpreter-interactivereader/">https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-scala-tools-nsc-interpreter-interactivereader/</a></p>
+<p><code>scala-compiler</code> is needed to prevent <code>java.lang.NoClassDefFoundError: scala/tools/nsc/interpreter/InteractiveReader</code> errors.</p>
+<p>see: <a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-org-apache-spark-repl-main/">https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-org-apache-spark-repl-main/</a></p>
+<h2 id="test-data">Test Data</h2>
+<p>Grab prostate and iris data from the H20 github repo:</p>
+<p><a href="https://raw.githubusercontent.com/h2oai/h2o-sparkling/master/data/prostate.csv">prostate data</a></p>
+<p><a href="https://raw.githubusercontent.com/h2oai/sparkling-water/master/examples/smalldata/iris/iris_wheader.csv">iris data</a></p>
+<p>and put them in the resources directory under <code>smalldata</code>  e.g.</p>
+<p><img src="https://craighagerman.github.io/img/resources.png" alt="Example image"></p>
+<h2 id="test-code">Test Code</h2>
+<p>Use <code>FunSpec</code> and   <code>SharedSparkSessionBase</code> to create a test spec (edit <code>package &lt;com.companyname&gt;.ml.clustering</code> as needed) :</p>
+<pre><code>package &lt;com.companyname&gt;.ml.clustering
 
-      </p>
-    </li>
-    
-    
-		
-    
-    </ul>
-  </div>
+import ai.h2o.sparkling.H2OContext
+import ai.h2o.sparkling.ml.algos.H2OKMeans
+import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.test.SharedSparkSessionBase
+import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.scalatest.FunSpec
+
+class H20ClusteringDemoSpec extends FunSpec with SharedSparkSessionBase {
+
+  private val dataDir = &quot;smalldata&quot;
+
+  /* Load specified data file from $dataDir resources directory*/
+  private def getDataFile(fileName: String) = {
+    getClass.getResource(s&quot;/${dataDir}/${fileName}&quot;).getFile
+  }
+
+  def getProstateData(spark: SparkSession): DataFrame = {
+    val dataFile = getDataFile(&quot;prostate.csv&quot;)
+    spark.read.format(&quot;csv&quot;).option(&quot;header&quot;, &quot;true&quot;).option(&quot;inferSchema&quot;, &quot;true&quot;).load(dataFile)
+  }
+
+  def getIrisData(spark: SparkSession): DataFrame = {
+    val dataFile = getDataFile(&quot;iris_wheader.csv&quot;)
+    spark.read.format(&quot;csv&quot;).option(&quot;header&quot;, &quot;true&quot;).option(&quot;inferSchema&quot;, &quot;true&quot;).load(dataFile)
+  }
+
+  describe(&quot;Demo H20 Algorithms&quot;) {
+    it(&quot;Run H2O KMeans on prostate data&quot;) {
+      val df = getProstateData(spark)
+      // Select a subsample
+      val train = df.filter(col(&quot;Capsule&quot;) === 1)
+      H2OContext.getOrCreate
+      val kmeans = new H2OKMeans().setK(3)
+      val model = kmeans.fit(train)
+      val prediction = model.transform(train).select(&quot;prediction&quot;).collect()
+      println(prediction.mkString(&quot;\n===&gt; Model predictions: &quot;, &quot;, &quot;, &quot;, ...\n&quot;))
+    }
+
+    it(&quot;Run H2O KMeans on iris data&quot;) {
+      val df = getIrisData(spark)
+      H2OContext.getOrCreate
+      val kmeans = new H2OKMeans().setK(3)
+      val model = kmeans.fit(df)
+      val prediction = model.transform(df).select(&quot;prediction&quot;).collect()
+      println(prediction.mkString(&quot;\n===&gt; Model predictions: &quot;, &quot;, &quot;, &quot;, ...\n&quot;))
+    }
+  }
+}
+
+</code></pre><h2 id="references--resources">References &amp; Resources</h2>
+<ul>
+<li>
+<p><a href="https://docs.h2o.ai/sparkling-water/2.4/latest-stable/doc/install/install_and_start.html">Installing and Starting H2O Sparking Water</a></p>
+</li>
+<li>
+<p><a href="https://docs.h2o.ai/sparkling-water/2.1/latest-stable/doc/deployment/deployment.html">H2O Sparking Water Deployment</a></p>
+</li>
+<li>
+<p><a href="http://docs.h2o.ai/sparkling-water/2.1/latest-stable/doc/ml/sw_kmeans.html">Train KMeans Model in Sparkling Water</a></p>
+</li>
+<li>
+<p><a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-scala-tools-nsc-interpreter-interactivereader/">Sparkling Water – java.lang.NoClassDefFoundError: scala/tools/nsc/interpreter/InteractiveReader</a></p>
+</li>
+<li>
+<p><a href="https://sparkbyexamples.com/h2o-sparkling-water/sparkling-water-java-lang-noclassdeffounderror-org-apache-spark-repl-main/">Sparkling Water – java.lang.NoClassDefFoundError: org/apache/spark/repl/Main</a></p>
+</li>
+</ul>
+
+      </div>
+    </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
 </div>
@@ -502,8 +596,6 @@ kbd, pre, samp {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        
-        <a href="https://craighagerman.github.io/index.xml" class="pure-menu-link pull-right">RSS</a>
         
       </div>
       
