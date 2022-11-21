@@ -56,21 +56,26 @@
 
         <!-- Hero content -->
         <div class="mdx-hero__content">
-          <h1>Technical documentation that just works</h1>
-          <p>{{ config.site_description }}. Set up in 5 minutes.</p>
+          <h1>Digital Garden</h1>
+          <p>
+            I am the Director of Data Science and Machine Learning at
+            <a href="https://www.exchangesolutions.com/" style="color:#FFFFFF; text-decoration: underline;" >ESI</a>.
+            I've spend the past decade consulting, mentoring & applying machine learning to tough problems.
+            This is my <span style="font-style: italic"> digital garden</span>.
+          </p>
           <a
-            href="{{ page.next_page.url | url }}"
-            title="{{ page.next_page.title | e }}"
+            href="{{ 'about/' | url }}"
+            title="About Me"
             class="md-button md-button--primary"
           >
-            Quick start
+            About Me
           </a>
           <a
-            href="{{ 'insiders/' | url }}"
-            title="Material for MkDocs Insiders"
+            href="{{ 'notes/' | url }}"
+            title="My Digital Garden"
             class="md-button"
           >
-            Get Insiders
+            Articles
           </a>
         </div>
       </div>

@@ -4,9 +4,7 @@
 site_name: Craig Hagerman
 site_url: https://squidfunk.github.io/mkdocs-material/
 site_author: Craig Hagerman
-site_description: >-
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project
+site_description: Craig Hagerman's Digital Garden
 
 # -------------------------
 # extra CSS & Javascript
@@ -124,24 +122,24 @@ markdown_extensions:
 # -------------------------
 # Page tree
 # -------------------------
-# nav:
-# - Home: index.md
-# - Getting started:
-#     - Installation: getting-started.md
-#     - Creating your site: creating-your-site.md
-#     - Publishing your site: publishing-your-site.md
-#     - Customization: customization.md
-#     - Browser support: browser-support.md
-#     - Philosophy: philosophy.md
-#     - Alternatives: alternatives.md
-#     - License: license.md
-#     - Changelog:
-#         - changelog/index.md
-#         - How to upgrade: upgrade.md
-# - Setup:
-#     - Changing the colors: setup/changing-the-colors.md
-#     - Changing the fonts: setup/changing-the-fonts.md
-#     - Changing the language: setup/changing-the-language.md
+nav:
+  - Home: index.md
+  - About:
+      - About1: about/about1.md
+      - Resume: about/resume.md
+  #     - Publishing your site: publishing-your-site.md
+  #     - Customization: customization.md
+  #     - Browser support: browser-support.md
+  #     - Philosophy: philosophy.md
+  #     - Alternatives: alternatives.md
+  #     - License: license.md
+  #     - Changelog:
+  #         - changelog/index.md
+  #         - How to upgrade: upgrade.md
+  - Notes:
+      - Note1: notes/note_1.md
+      - Note2: notes/note_2.md
+#      - Changing the language: setup/changing-the-language.md
 #     - Changing the logo and icons: setup/changing-the-logo-and-icons.md
 #     - Ensuring data privacy: setup/ensuring-data-privacy.md
 #     - Setting up navigation: setup/setting-up-navigation.md
