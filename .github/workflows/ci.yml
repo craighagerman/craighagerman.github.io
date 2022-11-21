@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master 
-      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,4 +12,6 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material 
+      - run: pip install mkdocs-minify-plugin
+      - run: pip install mkdocs-redirects
       - run: mkdocs gh-deploy --force
