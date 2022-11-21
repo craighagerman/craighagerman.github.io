@@ -11,8 +11,8 @@ site_description: >-
 # -------------------------
 # extra CSS & Javascript
 # -------------------------
-# extra_css:
-#   - stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css
 # extra_javascript:
 #   - javascripts/extra.js
 
@@ -47,14 +47,14 @@ theme:
   # - toc.integrate
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: red
+      accent: red
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: red
+      accent: red
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -73,6 +73,8 @@ extra:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/craighagerman
     - icon: fontawesome/brands/github
       link: https://github.com/craighagerman
     - icon: fontawesome/brands/twitter
