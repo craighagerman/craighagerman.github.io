@@ -125,7 +125,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - About:
-      - About1: about/about1.md
+      - About: about/about_me.md
       - Resume: about/resume.md
   #     - Publishing your site: publishing-your-site.md
   #     - Customization: customization.md
@@ -137,8 +137,8 @@ nav:
   #         - changelog/index.md
   #         - How to upgrade: upgrade.md
   - Notes:
-      - Note1: notes/note_1.md
-      - Note2: notes/note_2.md
+      - Notes: notes/notes.md
+      - What is Data Science: notes/what-is-data-science.md
 #      - Changing the language: setup/changing-the-language.md
 #     - Changing the logo and icons: setup/changing-the-logo-and-icons.md
 #     - Ensuring data privacy: setup/ensuring-data-privacy.md
