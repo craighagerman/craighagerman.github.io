@@ -138,7 +138,8 @@ nav:
   #         - How to upgrade: upgrade.md
   - Notes:
       - Notes: notes/notes.md
-      - What is Data Science: notes/what-is-data-science.md
+      - My Data Science Origin Story: notes/my-data-science-origin-story.md
+#       - What is Data Science: notes/what-is-data-science.md
 #      - Changing the language: setup/changing-the-language.md
 #     - Changing the logo and icons: setup/changing-the-logo-and-icons.md
 #     - Ensuring data privacy: setup/ensuring-data-privacy.md
