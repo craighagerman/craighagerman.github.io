@@ -1,0 +1,39 @@
+
+"Data science combines math and statistics, specialized programming, advanced analytics, artificial intelligence (AI), and machine learning with specific subject matter expertise to uncover actionable insights hidden in an organization’s data. These insights can be used to guide decision making and strategic planning."
+
+
+involves a  data science lifecycle
+- data ingestion
+- data processing
+- data analysis
+- communication
+
+
+"... find unseen patterns, derive meaningful information, and make business decisions"
+"Data science uses complex machine learning algorithms to build predictive models."
+
+
+
+Prerequisites
+- machine learning
+- modeling (mathematical models)
+- statistics
+- programming
+- databases
+
+
+data scientist must
+- understand business well enough to identify pain points and ask relevant questions
+- apply statistics, machine learning and computer science to data
+- use a wide range of tools & techniques to move, store, prepare, process and mine data
+- extract insights using AI/ML/heuristics
+- communicate analysis to stakeholders
+
+
+Tools
+- Python, Scala, Julia
+- Spark, Databricks, AWS, Azure
+- 
+
+
+
