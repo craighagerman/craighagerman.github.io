@@ -286,6 +286,11 @@ body:hover .visually-hidden button {
     color: $tumblr-color;
   }
 
+  .fa-threads,
+  .fa-threads-square {
+    color: $threads-color;
+  }
+  
   .fa-twitter,
   .fa-twitter-square {
     color: $twitter-color;
