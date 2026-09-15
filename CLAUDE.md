@@ -9,5 +9,5 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Claude-specific notes
 
 - This is a personal, single-author site with no test suite. "Verify your change" means: `bundle exec jekyll build --strict_front_matter` (matches CI) plus a visual check with `bundle exec jekyll serve`. Prefer small, direct edits over scaffolding.
-- Don't hand-edit generated files — regenerate them: `_data/cv.json` (via `bash scripts/update_cv_json.sh`), `assets/js/main.min.js` (via `npm run build:js`), and `talkmap_out.ipynb` / `talkmap/` (auto-generated in CI).
+- Don't hand-edit generated files — regenerate them: `_data/cv.json` (via `bash scripts/update_cv_json.sh`) and `assets/js/main.min.js` (via `npm run build:js`).
 - When you edit `_pages/cv.md` or any `assets/js/` source, include the regenerated output in the same change.

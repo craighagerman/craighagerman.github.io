@@ -24,10 +24,9 @@ This is a personal academic / portfolio website built from the [academicpages](h
 
 1. **`_data/cv.json` is generated.** It's produced from `_pages/cv.md` by `scripts/update_cv_json.sh` (which calls `scripts/cv_markdown_to_json.py`). Edit the Markdown and regenerate — hand edits to `cv.json` get overwritten on the next run.
 2. **Publications and talks can be bulk-generated.** `markdown_generator/publications.py` and `markdown_generator/talks.py` turn the `*.tsv`/`*.csv` files there into per-item Markdown in `_publications/` and `_talks/`. Editing individual collection files by hand is fine, but re-running a generator regenerates the whole set.
-3. **The talk map auto-commits.** Pushing changes under `_talks/**` (or `talkmap.ipynb`) triggers `.github/workflows/scrape_talks.yml`, which geocodes talk locations and pushes a **bot commit** updating `talkmap_out.ipynb` and `talkmap/`. Expect a follow-up commit after such a push.
-4. **JS is served pre-minified.** The site loads `assets/js/main.min.js`. After editing `assets/js/_main.js`, `theme.js`, or a plugin, run `npm run build:js` to rebuild it — source edits alone won't show up.
-5. **Plugins are limited to the GitHub Pages allowlist.** The `Gemfile` uses the `github-pages` gem, so only GitHub-Pages-supported plugins run on the deployed site. Adding an arbitrary Jekyll plugin to `_config.yml` silently does nothing in production.
-6. **CI builds with `--strict_front_matter`.** `.github/workflows/jekyll-build.yml` runs `bundle exec jekyll build --strict_front_matter` (Ruby 3.2, `JEKYLL_ENV=production`). Malformed or missing front matter fails the build even when local `jekyll serve` tolerates it.
+3. **JS is served pre-minified.** The site loads `assets/js/main.min.js`. After editing `assets/js/_main.js`, `theme.js`, or a plugin, run `npm run build:js` to rebuild it — source edits alone won't show up.
+4. **Plugins are limited to the GitHub Pages allowlist.** The `Gemfile` uses the `github-pages` gem, so only GitHub-Pages-supported plugins run on the deployed site. Adding an arbitrary Jekyll plugin to `_config.yml` silently does nothing in production.
+5. **CI builds with `--strict_front_matter`.** `.github/workflows/jekyll-build.yml` runs `bundle exec jekyll build --strict_front_matter` (Ruby 3.2, `JEKYLL_ENV=production`). Malformed or missing front matter fails the build even when local `jekyll serve` tolerates it.
 
 ## Local commands
 
