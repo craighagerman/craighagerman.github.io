@@ -246,6 +246,17 @@
   text-transform: uppercase;
 }
 
+.page__date {
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+  font-size: $type-size-7;
+  font-weight: normal;
+
+  strong {
+    font-weight: normal;
+  }
+}
+
 
 /*
    Page taxonomy
