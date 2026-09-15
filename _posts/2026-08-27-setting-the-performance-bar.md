@@ -10,6 +10,21 @@ tags:
 
 > Fifteen years of teaching taught me that most missed expectations are a failure to set them. What my classroom experience taught me about defining and holding a performance bar as an engineering manager.
 
+**TL;DR**
+
+- If someone misses a bar I never described, that is a management failure (mine!), not a performance failure. Run the retro on yourself first.
+- Separate the instructions from the task. People should be evaluated on the work, not on their ability to decode what was wanted.
+- Describing "good" is not enough. Show it. Give exemplars. A weak version next to a strong version teaches more than a rubric does.
+- Name it immediately. Letting it slide (deadlines!) or delaying feedback lets the low bar become the standard.
+- Fix the system, not just the instance. Set people up to succeed rather than catching them after they fail.
+- Build the standards with the team, not **at** them. Shared agreement on what "good" looks like is what makes a bar hold, not my oversight.
+- Standards and goals are different things. Skipping tests is a performance issue. A model that misses its number is not.
+- Empathy is not a reason to avoid the hard conversation. It is how you deliver straight talk as someone who wants them to succeed.
+
+---
+
+## Teacher to EM
+
 I spent 15+ years as a teacher & university professor.  I have roughly 10,000 hours of teaching experience. I learned a lot about how to manage performance from this, trying new things or tweaking my approach with every class and every term. I think a lot of this is relevant to managing performance as an EM. 
 
 ##  If the Instructions Weren't Clear, You Are the Problem
@@ -61,14 +76,3 @@ With all teams I've been clear that performance standards are separate from proj
 ## Empathy Is Not Avoidance
 
 With the pair that did a poor presentation I named the problem right away. I try to that that with my team. If someone is below the bar name it. I am empathetic, but that doesn't mean I avoid tough conversations. Rather I use my empathy to deliver straight talk from someone who wants to see them succeed. 
-
-## TL;DR on my learnings / philosophy
-
-- If someone misses a bar I never described, that is a management failure (mine!), not a performance failure. Run the retro on yourself first.
-- Separate the instructions from the task. People should be evaluated on the work, not on their ability to decode what was wanted.
-- Describing "good" is not enough. Show it. Give exemplars. A weak version next to a strong version teaches more than a rubric does.
-- Name it immediately. Letting it slide (deadlines!) or delaying feedback lets the low bar become the standard.
-- Fix the system, not just the instance. Set people up to succeed rather than catching them after they fail.
-- Build the standards with the team, not **at** them. Shared agreement on what "good" looks like is what makes a bar hold, not my oversight.
-- Standards and goals are different things. Skipping tests is a performance issue. A model that misses its number is not.
-- Empathy is not a reason to avoid the hard conversation. It is how you deliver straight talk as someone who wants them to succeed.

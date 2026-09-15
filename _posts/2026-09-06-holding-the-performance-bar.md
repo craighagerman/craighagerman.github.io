@@ -10,6 +10,20 @@ tags:
 
 > Failing a student is the closest thing a teacher has to firing someone. A student who failed my course and came back twice, and a senior hire who did not work out, and what each taught me about holding a performance bar without wrecking the person on the other side of it.
 
+**TL;DR**
+
+- Tell people where they stand while they can still do something about it. Honesty is the kindest version of the conversation, not the harshest.
+- A performance bar you have documented, repeated, and practiced is a bar you can hold. Personally own that bar.
+- Offer grace, but make people ask for it. "Come talk to me if you are stuck" has to be said out loud, and it only works if the person uses it.
+- Distinguish a coaching problem from a performance problem. Coaching that produces no change across 2-3 checkpoints is a signal. 
+- Before I decide, I give them a fair test of the thing I actually need, that is aligned with their own claimed strengths.
+- Then act. Identify issues → act decisively. Once the evidence is in, a slow decision doesn't help anyone.
+- Hold the line and treat the person well, with empathy. Those are not in tension.
+
+---
+
+## Teacher to EM
+
 I spent 15+ years as a teacher & university professor. I learned a lot about how to keep the performance bar. As an engineering manager I sometimes have to deal with someone who doesn't meet the performance bar, and might even have to let them go. As a teacher I couldn't "fire" a student but there is an analogue - failing the class. Firing and failing are both unfortunate outcomes none of us want, but still happen. 
 
 ## Tell People Where They Stand While They Can Still Act
@@ -59,17 +73,3 @@ The student didn't have a talent gap. She had the ability but wasn't applying it
 The thing is you can't always tell what type of issue you have in front of you. Is it a capability gap or an effort gap? Even then, will the person respond to coaching or demonstrate no movement. You don't know what kind of gap until you test for it.
 
 The two stories had the different outcomes, but the same conduct. In both cases I told the people plainly (and early) where they stood, and tried to do so with respect and empathy. 
-
-
-
-**TL;DR on my learnings / philosophy**
-
-- Tell people where they stand while they can still do something about it. Honesty is the kindest version of the conversation, not the harshest.
-- A performance bar you have documented, repeated, and practiced is a bar you can hold. Personally own that bar.
-- Offer grace, but make people ask for it. "Come talk to me if you are stuck" has to be said out loud, and it only works if the person uses it.
-- Distinguish a coaching problem from a performance problem. Coaching that produces no change across 2-3 checkpoints is a signal. 
-- Before I decide, I give them a fair test of the thing I actually need, that is aligned with their own claimed strengths.
-- Then act. Identify issues → act decisively. Once the evidence is in, a slow decision doesn't help anyone.
-- Hold the line and treat the person well, with empathy. Those are not in tension.
-
-
