@@ -7,6 +7,7 @@ tags:
   - EM
 ---
 
+> You can’t instill motivation in people, but you can create an environment that feeds whatever inherent spark they already have. For engineering leaders, that means connecting work to a larger purpose and knowing people well enough to understand what motivates them individually.
 
 
 **TL;DR**
