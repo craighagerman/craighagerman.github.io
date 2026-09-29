@@ -26,7 +26,7 @@ tags:
 
 ## What Applied Linguistics Taught Me About Motivation
 
-I'll get to the topic of team motivating as an EM. I promise. But I'm going to take a round-a-bout way of getting there.  
+I'll get to the topic of team motivation. I promise. But I'm going to take a round-a-bout way of getting there.  
 
 One of the last courses I took when I did a masters in applied linguistics was *Bilingualism*. But to be honest it was almost a fluke that I signed up. I didn't find the course description that compelling. But a couple other courses I *was* more interested in conflicted with ones that were requirements. So I gave it a second look and ended up signing up *simply* because of the instructor. I had had her a couple years previous and really enjoyed that course. I've always found going with the person instead of the content to be positive. (I've found the same to be true for directors and movies.)
 
