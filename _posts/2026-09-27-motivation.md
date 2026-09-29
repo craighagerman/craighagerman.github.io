@@ -1,11 +1,10 @@
 ---
-title: 'You Can't Motivate People'
+title: 'You Can''t Motivate People'
 date: 2026-09-27
 permalink: /posts/motivation/
 tags:
   - teacher
   - EM
-  - performance-bar
 ---
 
 
