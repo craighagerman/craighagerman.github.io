@@ -140,7 +140,7 @@ Directed data science and machine learning for a retail loyalty personalization 
 Led ML methodology and data science on the commercial team across a portfolio of enterprise engagements. Six years total at Uncharted across its research and commercial phases.
 
 - Mentored new hires and junior data scientists, interviewed data science candidates, ran ML and DS reading groups and internal tutorials, and consulted on and directed ML efforts for other teams.
-- Built the machine learning engine powering an enterprise customer-experience platform on Spark and Databricks: customer journey analytics, intent classification, real-time interaction management, and journey orchestration. The platform held Forrester Wave Leader status three years running, and the vendor was acquired by Medallia for more than $300M in 2022.
+- Built the machine learning engine powering an enterprise customer-experience platform on Spark and Databricks: customer journey analytics, intent classification, real-time interaction management, and journey orchestration. The platform held Forrester Wave Leader status three years running.
 - Delivered bespoke ML and data-strategy engagements for more than twenty enterprise clients including Bloomberg, Fidelity, Cigna, Infor, Refinitiv, RBC, Scotiabank, Payments Canada, and the British Columbia Securities Commission.
 - Led client-facing pre-sales, RFP presentations, workshops, and project kickoffs, with weekly touchpoints with a client CTO and Chief Solutions Officer and quarterly in-person sessions.
 - Worked fully remote across Eastern and UK time zones for the duration.
