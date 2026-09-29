@@ -3,7 +3,7 @@ title: 'You Can''t Motivate People (if you don''t really know them)'
 date: 2026-09-27
 permalink: /posts/motivation/
 header:
-  image: olena-bohovyk-DmeZC9riGkk-unsplash.jpg
+  image: endless_sea.png
 tags:
   - teacher
   - EM
