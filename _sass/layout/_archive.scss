@@ -155,6 +155,18 @@
   }
 }
 
+.page__related .grid__item {
+  .archive__item-excerpt {
+    display: none;
+  }
+
+  @include breakpoint($medium) {
+    .archive__item-excerpt {
+      display: none;
+    }
+  }
+}
+
 
 /*
    Features

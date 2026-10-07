@@ -34,6 +34,14 @@
   }
 }
 
+.page.page--wide {
+  @include breakpoint($large) {
+    @include span(12 of 12);
+    @include prefix(1 of 12);
+    @include suffix(1 of 12);
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
@@ -402,6 +410,12 @@
   a {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+.page__related.page__related--wide {
+  @include breakpoint($large) {
+    @include pre(1 of 12);
   }
 }
 
